@@ -1,0 +1,30 @@
+name: Build and Deploy Resume PDF
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up TeX Live
+        run: sudo apt-get install -y texlive texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+
+      - name: Compile LaTeX file
+        run: |
+          pdflatex -interaction=nonstopmode resume.tex
+          pdflatex -interaction=nonstopmode resume.tex # Run twice to resolve references
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume-pdf
+          path: resume.pdf
