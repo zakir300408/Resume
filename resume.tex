@@ -1,103 +1,107 @@
-\documentclass[11pt,a4paper,sans]{moderncv}        
+\documentclass[10.2pt,a4paper,sans]{moderncv}        
 \moderncvstyle{banking}                            
 \moderncvcolor{blue}                               
-\usepackage[scale=0.78]{geometry}
+\usepackage[scale=0.87]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}  % Ensure proper UTF-8 encoding
+\usepackage{helvet}  % Load Helvetica font
+\renewcommand{\familydefault}{\sfdefault}  % Set default font to sans-serif (Helvetica)
 
 % Personal Information
 \name{Zakir}{Ullah}
 \title{Machine Learning Engineer}                               
 \phone[mobile]{+8613472738184}                   
 \email{zakir@sagemotion.com}                               
-\social[linkedin]{https://www.linkedin.com/in/zakirullah300/}
-\social[github]{https://github.com/zakir300408}
+\social[linkedin]{zakirullah300}
+\social[github]{zakir300408}
 
 \begin{document}
-
-\makecvtitle
-
-\section{Summary}
-\cvitem{}{
-As a Machine Learning Engineer and PhD Researcher, I thrive on tackling complex problems with AI, robotics, ML algorithms, and a bit of mechanical engineering magic. My journey has taken me from developing smart, autonomous robots to diving deep into the world of reinforcement learning, wearable systems, and computer vision. I'm not just about algorithms and code; I love leading teams, especially in Machine learning projects, and I get a kick out of making projects run smoothly with a mix of SCRUM and Six Sigma. Currently, I’m on the lookout to bring my blend of academic insight and practical know-how to new challenges, ideally where I can keep pushing the boundaries of what algorithms can learn and do.
-}
-\section{Skills}
-\cvitem{Programming Languages}{Experienced in Python and C++ for software and ML algorithm development.}
-
-\cvitem{Machine Learning \& AI}{
-    Deep Learning (TensorFlow, PyTorch), Computer Vision (ResNet, UNet, YOLOv8), Time Series (LSTM, RandomForest), Reinforcement Learning (TD3), and proficient in scikit-learn.
-}
-
-\cvitem{Tools \& Technologies}{
-    Proficient in Git, DVC, PowerBI, GCP; skilled in Arduino, Raspberry Pi, STM32 programming; experienced with CI/CD pipelines using GitHub.
-}
-
-\cvitem{Project Management}{
-    Skilled in SCRUM and Six Sigma, with practical experience using Jira for project tracking and testing.
-}
-
-\cvitem{Design \& CAD}{
-    Competent in Autodesk Inventor, GD\&T, SolidWorks, and CAM for mechanical design and 3D modeling.
-}
-
-
-
-
-
-\section{Professional Experience}
-\cventry{2-2023--Present}{Machine Learning Engineer}{SageMotion}{}{}{
-    \begin{itemize}%
-        \item Developed and deployed a machine learning model to predict Ground Reaction Force (GRF) from subjects' walking data on a treadmill. Deployed the model on SageMotion's edge device for real-time GRF prediction, and tested against Vicon System.
-        \item Designed an SDK in C++ for EEG device's onboard controller and a complementary Python PyPi package, enabling simple command-based user interactions.
-        \item Engineered a PCB test fixture for Bluetooth modules and developed an application for network communication between the Vicon system and SageMotion hub.
-        \item Led the integration of EMG sensors with IMUs for real-time data collection, managing development and testing phases using Jira.
-    \end{itemize}
-}
-\cvitem{}{Projects backed by GitHub repositories for verification and insights: 
-
-\url{https://github.com/zakir300408}}
-
-
-\section{Education}
-\cventry{2022--2025}{PhD in Machine Learning and Wearable systems}{Shanghai Jiao Tong University (SJTU)}{}{}{
-    \begin{itemize}%
-        \item Conducting advanced research in reinforcement learning control of magnetic soft robots, focusing on TD3 algorithms for complex movement and interaction patterns.
-        {[Paper Under Review]}
-        \item Engaging in collaborative international research aimed at developing machine learning algorithms for analyzing stride width and time variability in Ataxia patients, contributing to significant advancements in medical robotics.
-        {[Paper Under Review]}
-    \end{itemize}
-}
-
-\cventry{2018--2022}{Master of Science in Mechanical Engineering}{Beihang University (BUAA)}{}{}{
-    \begin{itemize}%
-        \item Spearheaded a project on polyp segmentation using a Unet-based model and enhanced polyp detection with YOLO, paving the way for improvements in automated medical diagnostics. {[Paper Under Review]}
-        \item Innovated a biopsy capsule robot design for minimally invasive medical procedures within the gastrointestinal tract, showcasing the potential for remote and autonomous micro-tasks. \href{https://ieeexplore.ieee.org/abstract/document/8860958}{[Link to paper]}
-    \end{itemize}
-}
-
-\cventry{2014--2018}{Bachelor of Science in Mechanical Engineering (With Distinction)}{Beihang University (BUAA)}{}{}{
-    \begin{itemize}%
-        \item Pioneered designing and constructing an electromagnetic swimming robot with Arduino-based control and Bluetooth connectivity, demonstrating proficiency in robotics engineering and wireless system integration.
-        \href{https://ieeexplore.ieee.org/document/9612684}{[Link to paper]}
-        \item Led multiple projects including a BB8 robot, an obstacle-avoiding robot, and an electric hybrid trike design, showcasing a versatile skill set in mechanical design, 3D printing, and control systems.
-    \end{itemize}
-}
-
-\section{Awards and Scholarships}
-\cventry{2022--2025}{Full PhD Scholarship}{Shanghai Jiao Tong University (SJTU)}{}{}{
-Awarded for academic excellence at a globally ranked institution, 43rd, acknowledging significant potential in machine learning and robotics research.
-}
-\cventry{2018--2022}{CSC Scholarship for Master's Studies}{Beihang University (BUAA)}{}{}{
-Granted based on winning an outstanding thesis award and potential for contribution to the field of mechanical engineering and medical robotics.
-}
-\cventry{2014--2018}{Full Scholarship for Bachelor's Studies}{Beihang University (BUAA)}{}{}{
-Received for good academic performance and potential, covering full tuition and living expenses.
-}
-\cventry{2018}{Best Thesis Award for Bachelor's Thesis}{Beihang University (BUAA)}{}{}{
-Honored for the innovative design and implementation of an electromagnetic swimming robot.
-}
-\cventry{2015--2017}{Consecutive Excellent Study Awards}{Beihang University (BUAA)}{}{}{
-Awarded annually for top academic performance, demonstrating consistent excellence and dedication to scholarly pursuits.
-}
-
-
-
+	
+	\makecvtitle
+	
+	\section{Summary}
+	\cvitem{}{
+		As a curious person, Machine Learning and robotics were a natural fit for me as a PhD researcher. The thrill of discovering, implementing, and developing new algorithms and techniques to automate, predict, and improve technology is what motivates me to work every day. I have a background in Mechanical Engineering and Machine Learning algorithms, and most recently, wearable systems and sensors. I have developed useful libraries, written predictive models for wearable systems to predict ground reaction forces from wearable IMUs, filtered EMG signals to measure muscle movement reactions, estimated step width based on IMUs from patients with ataxia, used various filters and physics-based equations to determine the orientation of different body segments from Quat data, and applied reinforcement learning and autoencoders for soft robotic control. I have also used computer vision-based ML models like Unet, Yolo, and various other models for segmentation, detection, tracking, and real-time calculations. I try to learn and adapt quickly; for example, I was recently introduced to JIRA, which my team uses, through which I have solved many issues, completed mergers, and collaborated extensively with my team on GitHub. As a result of my so-called startup mentality, I realized that my wide skill set would be better utilized in projects that involve a bit of the unknown and the mystery of novelty and development. Besides that, I am a very flexible person; having spent six years as a researcher makes you flexible anyway, and adaptability is a prerequisite for it.}	
+	
+	\section{Skills}
+	\cvitem{Programming Languages}{6+ years of Python and C++ experience.}
+	\cvitem{Machine Learning \& AI}{
+		\begin{itemize}
+			\item Deep Learning (PyTorch)
+			\item Computer Vision (ResNet, UNet, YOLO)
+			\item Time Series (LSTM, RandomForest)
+			\item Reinforcement Learning (TD3, PPO)
+			\item SVMs, K-NNs, clustering, autoencoders, boosting, bagging
+			\item scikit-learn
+		\end{itemize}
+	}
+	\cvitem{Tools \& Technologies}{
+		\begin{itemize}
+			\item Git, DVC
+			\item Arduino, Raspberry Pi, STM32 programming
+			\item CI/CD pipelines using GitHub
+		\end{itemize}
+	}
+	\cvitem{Project Management}{Practical experience using Jira for project tracking and testing.}
+	\cvitem{Design \& CAD}{
+		\begin{itemize}
+			\item Autodesk Inventor
+			\item SolidWorks
+			\item CAM for mechanical design and 3D modeling
+		\end{itemize}
+	}
+	
+	\section{Professional Experience}
+	\cventry{Feb 2023--Present}{Machine Learning Engineer}{\textbf{SageMotion}}{}{}{
+		\begin{itemize}%
+			\item Developed and deployed a Machine Learning model to predict Ground Reaction Force (GRF) using wearable IMUs in real-time, now part of \textbf{SageMotion} System. 
+			\item Designed an SDK in C++ for an EEG device's (\textbf{Niantong}) onboard controller and Python PyPi package; this SDK enabled \textbf{Niantong} customers to use the device with other hardware and streaming through Lab Streaming Layer (LSL).
+			\item Worked on a real-time app that can predict step width from IMU data in ataxia patients and healthy subjects.
+			\item Engineered a PCB test fixture for Bluetooth module re-flashing, cutting down programming time from 1 hour to 2 minutes.
+			\item Developed an application for network communication between the Vicon system and \textbf{SageMotion} hub.
+			\item Led the integration of EMG sensors with the \textbf{SageMotion} System for real-time data feedback-based training; used a low pass filter for data cleaning.
+		\end{itemize}
+	}
+	\cvitem{}{Projects backed by GitHub repositories for verification and insights: \url{https://github.com/zakir300408}}
+	
+	\section{Education}
+	\cventry{2022--2025}{PhD in Machine Learning and Wearable Systems}{Shanghai Jiao Tong University (SJTU)}{}{}{
+		\begin{itemize}%
+			\item Using reinforcement learning and other ML techniques to obtain magnetic soft robot control, focusing on TD3, PPO algorithms, and ensemble MLPs. [Paper Under Review in \textit{IEEE Transactions on Robotics}]
+			\item Using ML to predict stride width and stride time variability in Ataxia patients, contributing to significant advancements in medical robotics. [Paper Under Review]
+			\item Used Bidirectional autoencoders to generate synthetic data for electromagnetic signal data, resulting in joystick control [Paper Under Review]
+		\end{itemize}
+	}
+	
+	\cventry{2018--2022}{Master of Science in Mechanical Engineering}{Beihang University (BUAA)}{}{}{
+		\begin{itemize}%
+			\item Completed polyp segmentation using a Unet-based model for capsule robots; used GAN to create synthetic images to increase the minority classes, hence obtaining a 15\% improvement in segmentation performance.
+			\item Designed a biopsy capsule robot for minimally invasive medical procedures within the gastrointestinal tract. \href{https://ieeexplore.ieee.org/abstract/document/8860958}{[Link to paper]}
+		\end{itemize}
+	}
+	
+	\cventry{2014--2018}{Bachelor of Science in Mechanical Engineering (With Distinction)}{Beihang University (BUAA)}{}{}{
+		\begin{itemize}%
+			\item Designed, manufactured, programmed, and controlled a novel non-motor-based electromagnetic swimming robot with a semi-flexible fin with Arduino-based control and Bluetooth connectivity; built an Android app for its control. \href{https://ieeexplore.ieee.org/document/9612684}{[Link to paper]}
+			\item Various semester projects including a BB8 robot, an obstacle-avoiding robot, and an electric hybrid trike design.
+		\end{itemize}
+	}
+	
+	\section{Awards and Scholarships}
+	\cventry{2022--2025}{Full PhD Scholarship}{Shanghai Jiao Tong University (SJTU)}{}{}{
+		Awarded a full CSC scholarship at SJTU (45th QS ranking).
+	}
+	\cventry{2018--2022}{CSC Scholarship for Master's Studies}{Beihang University (BUAA)}{}{}{
+		Awarded a full CSC scholarship for Master's due to receiving the Best Thesis Award during my bachelor's.
+	}
+	\cventry{2018}{Best Thesis Award for Bachelor's Thesis}{Beihang University (BUAA)}{}{}{
+		Awarded for a non-motor-based electromagnetic swimming robot project that was the focus of my bachelor's thesis.
+	}
+	\cventry{2014--2018}{Full Scholarship for Bachelor's Studies}{Beihang University (BUAA)}{}{}{
+		Received for excellent academic performance in high school, covering full tuition subject to maintaining a top 5 class ranking during bachelor's (Condition fulfilled).
+	}
+	\cventry{2015--2017}{Consecutive Excellent Study Awards}{Beihang University (BUAA)}{}{}{
+		Awarded annually for top academic performance in the School of Mechanical Engineering.
+	}
+	
 \end{document}
